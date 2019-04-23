@@ -4,7 +4,9 @@ FastUniq as an ultrafast de novo tool for removal of duplicates in paired short 
 
 ## Basic Information
 Installed: April, 2019
+
 Updated: NA
+
 Link: https://sourceforge.net/projects/fastuniq/files/
 
 ## Usage
