@@ -1,0 +1,17 @@
+
+#%Module1.0
+#####################################################################
+##
+## beagle Modulefile
+## by Alan Orth, <a.orth@cgiar.org>
+## April, 2014
+##
+set appname   beagle
+set version   3.0.2
+set prefix    /opt/apps/${appname}/${version}
+
+conflict      beagle
+
+# load library path for stuff which needs beagle
+prepend-path  LD_LIBRARY_PATH ${prefix}/lib
+
