@@ -1,0 +1,22 @@
+
+#%Module1.0#####################################################################
+##
+## Cytoscape modulefile
+## By Alan Orth <a.orth@cgiar.org>
+## July, 2013
+##
+
+# for Tcl script use only
+set     appname         cytoscape
+set     version         3.1.1
+set     prefix          /opt/apps/${appname}/${version}
+set     exec_prefix     ${prefix}
+
+conflict        cytoscape
+
+prepend-path    PATH            ${exec_prefix}
+
+# depends on biana
+if { ![is-loaded biana] } {
+        module load biana/everlyn
+}

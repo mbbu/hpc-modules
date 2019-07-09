@@ -1,0 +1,15 @@
+
+#%Module1.0
+#####################################################################
+##
+## gatk Modulefile
+## by Espira andrew <aespira@icipe.org>
+## june 2019
+##
+set version             4.0.10.1
+set appname             gatk
+set prefix              /opt/apps/${appname}/${version}
+set exec_prefix         ${prefix}/bin
+
+prepend-path  PATH	${exec_prefix}
+
