@@ -1,14 +1,14 @@
-#get binaries and put in the correct location
+## get binaries and put in the correct location
 wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/LATEST/ncbi-blast-2.9.0+-x64-linux.tar.gz
 tar -xzf ./ncbi-blast-2.9.0+-x64-linux.tar.gz
 mkdir -p /etc/modulefiles/ncbi-blast/
 mv ncbi-blast-2.9.0+ /etc/modulefiles/ncbi-blast/
 
 
-#Create database directory
+## Create database directory
 mkdir -p /etc/modulefiles/ncbi-blast/ncbi-blast-2.9.0+/db
 
-#Install the nr database
+## Install the nr database
 cd /etc/modulefiles/ncbi-blast/ncbi-blast-2.9.0+/db
 for num in `seq 0 48`;
 do
@@ -16,7 +16,7 @@ paddednum=`printf "%02d" $num`
 `wget ftp://ftp.ncbi.nlm.nih.gov/blast/db/nr.$paddednum.tar.gz`
 done
 
-#Install the nt database
+## Install the nt database
 for num in `seq 0 36`;
 do
 paddednum=`printf "%02d" $num`
