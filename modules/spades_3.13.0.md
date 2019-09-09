@@ -34,6 +34,5 @@ cd SPAdes-3.13.1-Linux
 
 mv * /opt/apps/spades/3.13.0
 
-
 sudo chown -R root:root /opt/apps/spades/3.13.0
 ```
