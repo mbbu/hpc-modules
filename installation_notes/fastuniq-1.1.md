@@ -1,15 +1,18 @@
+
 ## FastUniq
 
-FastUniq as an ultrafast de novo tool for removal of duplicates in paired short DNA sequence reads in FASTQ format
+FastUniq is an ultrafast de novo tool for removal of duplicates in paired short DNA sequence reads in FASTQ format.
 
 ## Basic Information
-Installed: April, 2019
+
+Installed: April 2019
 
 Updated: NA
 
 Link: https://sourceforge.net/projects/fastuniq/files/
 
 ## Usage
+
 You can check the available versions using:
 `module avail fastuniq`
 
@@ -17,7 +20,8 @@ Then you can load the required version using:
 `module load fastuniq/1.1`
 
 ## Installation
-Install instructions available from: https://sourceforge.net/projects/fastuniq/files/
+
+Install instructions available from https://sourceforge.net/projects/fastuniq/files/
 
 ```
 sudo mkdir -p /opt/apps/fastuniq/1.1

@@ -3,6 +3,7 @@
 ParDRe is a parallel tool to remove duplicate reads. 
 
 ## Basic Information
+
 Installed: April, 2019
 
 Updated: NA
@@ -10,6 +11,7 @@ Updated: NA
 Link: https://sourceforge.net/projects/pardre/
 
 ## Usage
+
 You can check the available versions using:
 `module avail pardre`
 
@@ -17,7 +19,9 @@ Then you can load the required version using:
 `module load pardre/1.1`
 
 ## Installation
-Install instructions available from: https://sourceforge.net/projects/pardre/
+
+Install instructions: https://sourceforge.net/projects/pardre/
+
 ```
 sudo mkdir -p /opt/apps/pardre/rel2.2.5
 
