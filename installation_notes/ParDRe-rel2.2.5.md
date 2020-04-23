@@ -4,7 +4,7 @@ ParDRe is a parallel tool to remove duplicate reads.
 
 ## Basic Information
 
-Installed: April, 2019
+Installed: April 2019
 
 Updated: NA
 
@@ -37,7 +37,7 @@ cd ParDRe-rel2.2.5/source
 
 make
 
-%TODO: Still to figure out setup
+%TODO: Still to figure out the setup
 
 mv pardre /opt/apps/pardre/1.1
 
