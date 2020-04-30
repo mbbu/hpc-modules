@@ -1,36 +1,31 @@
-## QIIME2
+#%Module1.0
+#####################################################################
+##
+## qiime2 Modulefile
+## by Andrew Espira <aespira@icipe.org>
+## April, 2020
+##
 
-QIIME is an open-source bioinformatics pipeline for performing microbiome analysis from raw DNA sequencing data. QIIME2 is a completely new and different version than QIIME1
+set appname         qiime2
+set version         2020
+set prefix          /opt/apps/${appname}/${version}
+set exec_prefix     ${prefix}/bin
+set datarootdir     ${prefix}/share
 
-## Basic Information
-Installed: April, 2020
+# conflict if qiime OR python is loaded, because qiime has its own python
+conflict			qiime qiime2 python
 
-Updated: NA
+prepend-path        PATH		${exec_prefix}
 
-Link: https://docs.qiime2.org/2020.2/install/native/#install-qiime-2-within-a-conda-environment
+# Add man pages
+prepend-path        MANPATH		${datarootdir}/man
+prepend-path        MANPATH		${prefix}/man
 
-## Usage
-You can check the available versions using:
-`module qiime2/2020`
+# Other environment variables extracted from examining `env` before and after
+# activating qiime2 in the conda virtual environment (because the user can't
+# use conda itself via modules). This is not an exact science...
+setenv              PYTHONNOUSERSITE    ${prefix}/lib/python3.6/site-packages
+setenv              MPLBACKEND          Agg
+setenv              R_LIBS_USER         ${prefix}/lib/R/library
 
-Then you can load the required version using:
-`module load qiime2/2020`
-
-## Installation
-Install instructions available from:  https://hpc.ilri.cgiar.org/qiime2-software
-
-```
-cd /tmp
-$ sudo mkdir /opt/apps/qiime2
-$ sudo chown admin:admin /opt/apps/qiime
-$ wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
-$ bash Miniconda3-latest-Linux-x86_64.sh -p /opt/apps/qiim2.1/conda
-$ source /opt/apps/qiime2/conda/bin/activate
-$ conda update -n base conda
-$ wget https://data.qiime2.org/distro/core/qiime2-2020.2-py36-linux-conda.yml
-$ conda env create -p /opt/apps/qiime2-2020.2-py36-linux-conda.yml
-$ conda activate /opt/apps/qiime2/2020
-$ sudo chown -R root:root /opt/apps/qiime2
-$ qiime --help
-
-```
+# vim: set sw=4 t
