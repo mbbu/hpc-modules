@@ -3,35 +3,34 @@
 QIIME is an open-source bioinformatics pipeline for performing microbiome analysis from raw DNA sequencing data. QIIME2 is a completely new and different version than QIIME1
 
 ## Basic Information
-Installed: Aug, 2019
+Installed: April, 2020
 
 Updated: NA
 
-Link: https://hpc.ilri.cgiar.org/qiime2-software
+Link: https://docs.qiime2.org/2020.2/install/native/#install-qiime-2-within-a-conda-environment
 
 ## Usage
 You can check the available versions using:
-`module qiime2/2019.7 `
+`module qiime2/2020`
 
 Then you can load the required version using:
-`module load qiime2/2019.7 `
+`module load qiime2/2020`
 
 ## Installation
 Install instructions available from:  https://hpc.ilri.cgiar.org/qiime2-software
 
 ```
 cd /tmp
-$ sudo mkdir /opt/apps/qiime2.1
-$ sudo chown bmuganda:bmuganda /opt/apps/qiime2.1
+$ sudo mkdir /opt/apps/qiime2
+$ sudo chown admin:admin /opt/apps/qiime
 $ wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 $ bash Miniconda3-latest-Linux-x86_64.sh -p /opt/apps/qiim2.1/conda
 $ source /opt/apps/qiime2/conda/bin/activate
 $ conda update -n base conda
-$ wget https://data.qiime2.org/distro/core/qiime2-2019.7-py35-linux-conda.yml
-$ conda env create -p /opt/apps/qiime2.1/2019.7 --file qiime2-2019.7-py35-linux-conda.yml
-$ conda activate /opt/apps/qiime2.1/2019.7
-$ sudo chown -R root:root /opt/apps/qiime2.1
-pt/apps/qiime2
+$ wget https://data.qiime2.org/distro/core/qiime2-2020.2-py36-linux-conda.yml
+$ conda env create -p /opt/apps/qiime2-2020.2-py36-linux-conda.yml
+$ conda activate /opt/apps/qiime2/2020
+$ sudo chown -R root:root /opt/apps/qiime2
 $ qiime --help
 
 ```
