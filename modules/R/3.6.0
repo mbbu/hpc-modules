@@ -1,0 +1,16 @@
+#%Module1.0
+#####################################################################
+##
+## beagle Modulefile
+## by Andrew espira, <aespira@icipe.org>
+## April, 2020
+##
+set appname   R
+set version   3.6.0
+set prefix    /opt/apps/${appname}/${version}
+
+conflict      R
+
+# load library path for stuff which needs R
+prepend-path  LD_LIBRARY_PATH ${prefix}/lib
+
