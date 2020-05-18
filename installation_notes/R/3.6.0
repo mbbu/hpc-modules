@@ -1,6 +1,7 @@
-<code>
+
   
 $ cd /tmp
+
 $ wget https://cran.r-project.org/src/base/R-3/R-3.6.1.tar.gz
 $ tar xf R-3.6.1.tar.gz
 $ cd R-3.6.1
