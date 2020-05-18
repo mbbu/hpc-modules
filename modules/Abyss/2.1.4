@@ -1,0 +1,18 @@
+#%Module1.0#####################################################################
+##
+## abyss Modulefile
+## By Andrew espira <aespira@icipe.org>
+## May, 2020
+##
+
+set appname         abyss
+set version         2.1.4
+set prefix          /export/opt/apps/${appname}/${version}
+set exec_prefix     ${prefix}/bin
+
+conflict        ${appname}
+
+prepend-path    PATH        ${exec_prefix}
+prepend-path    MANPATH     ${exec_prefix}/share/man
+
+# vim: set sw=4 ts=4:
