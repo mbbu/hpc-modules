@@ -1,12 +1,17 @@
-<code>$ cd /tmp
+<code>
+  
+$ cd /tmp
 $ wget https://cran.r-project.org/src/base/R-3/R-3.6.1.tar.gz
 $ tar xf R-3.6.1.tar.gz
 $ cd R-3.6.1
+
 # install packages to enable capabilities in R
 $ sudo yum install libX11-devel libXaw-devel bzip2-devel libcurl-devel xz-devel readline-devel
+
 # install a newer compiler from Red Hat software collections
 $ sudo yum install devtoolset-7-gcc devtoolset-7-gcc-gfortran devtoolset-7-libquadmath-devel devtoolset-7-gcc-c++
 $ scl enable devtoolset-7 bash
+
 # R packages are written in C99 and GCC 7 uses a newer standard by default, so tell configure script to use C99 explicitly
 $ export CFLAGS='-std=gnu99  -g -O2'
 $ ./configure --enable-R-shlib --prefix=/opt/apps/R/3.6
