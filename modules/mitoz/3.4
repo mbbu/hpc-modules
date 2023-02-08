@@ -1,0 +1,21 @@
+#%Module1.0
+#####################################################################
+##
+## mitoz Modulefile
+## by Caleb Kibet <ckibet@icipe.org>
+## December, 2022
+##
+
+set appname         mitoz
+set version         3.4
+set prefix          /opt/apps/${appname}/${version}
+set exec_prefix     ${prefix}/bin
+set datarootdir     ${prefix}/share
+
+prepend-path        PATH		${exec_prefix}
+
+# Add man pages
+prepend-path        MANPATH		${datarootdir}/man
+prepend-path        MANPATH		${prefix}/man
+
+# vim: set sw=4 t
