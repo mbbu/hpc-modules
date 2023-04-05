@@ -1,0 +1,19 @@
+#%Module1.0
+#####################################################################
+##
+## rmblast Modulefile
+## by Cyndie <cmwihaki@icipe.org>
+## April, 2023
+##
+
+set appname             rmblast
+set version             2.13.0
+set prefix              /opt/apps/${appname}/${version}
+set exec_prefix         ${prefix}/bin
+set url                 "http://repeatmasker.org/RMBlast.html"
+
+conflict rmblast
+
+prepend-path    PATH    ${exec_prefix}
+
+# vim: set sw=4 ts=4:
