@@ -1,0 +1,19 @@
+#%Module1.0
+#####################################################################
+##
+## hmmer Modulefile
+## by Cyndie <cmwihaki@icipe.org>
+## April, 2023
+##
+
+set appname             hmmer
+set version             3.3.2
+set prefix              /opt/apps/${appname}/${version}
+set exec_prefix         ${prefix}/bin
+set url                 "http://hmmer.org/"
+
+conflict hmmer
+
+prepend-path    PATH    ${exec_prefix}
+
+# vim: set sw=4 ts=4:
