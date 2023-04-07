@@ -1,0 +1,19 @@
+#%Module1.0
+#####################################################################
+##
+## repeatmasker Modulefile
+## by Cyndie <cmwihaki@icipe.org>
+## April, 2023
+##
+
+set appname             repeatmasker
+set version             4.1.4
+set prefix              /opt/apps/${appname}/${version}
+set exec_prefix         ${prefix}/bin
+set url                 "http://repeatmasker.org/"
+
+conflict repeatmasker
+
+prepend-path    PATH    ${exec_prefix}
+
+# vim: set sw=4 ts=4:
